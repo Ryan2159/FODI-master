@@ -910,14 +910,14 @@
         const buttonParent = button.parentElement;
         const buttonClone = button.cloneNode(true);
         buttonParent.replaceChild(buttonClone, button);
-        input.placeholder = "请输入密码";
+        input.placeholder = "Please enter password";
         buttonClone.addEventListener("click", (event) => {
           const passwd = input.value;
           if (!input.value) {
             return;
           }
           input.value = "";
-          input.placeholder = "正在验证..";
+          input.placeholder = "Verifying..";
           sendRequest(
             window.api.method,
             window.api.url,
